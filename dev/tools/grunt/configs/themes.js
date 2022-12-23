@@ -38,9 +38,9 @@ module.exports = {
         files: ["css/styles-m", "css/styles-l"],
         dsl: "less",
     },
-    test_theme: {
+    main_theme: {
         area: "frontend",
-        name: "Daunku/test_theme",
+        name: "Doogee/main_theme",
         locale: "en_US",
         files: ["css/styles-m", "css/styles-l"],
         dsl: "less",

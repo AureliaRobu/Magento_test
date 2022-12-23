@@ -1,0 +1,102 @@
+//  Common
+
+& when (@media-common = true) {
+    .social-links {
+        .links-icons {
+
+            background-color: #ffffff;
+
+            ul {
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 4rem;
+                padding: 2rem 5rem;
+                list-style: none;
+
+                .fa-brands {
+                    color: @footer__background-color;
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+    .page-footer {
+        background-color: @footer__background-color;
+    }
+    .footer {
+        &.content {
+            display: grid;
+            align-items: start;
+
+            margin: 0;
+            padding: 0;
+            grid-template-columns: 1fr;
+            border: none;
+            color: #ffffff;
+
+            .block.newsletter {
+                grid-row: 1;
+                max-width: 400px;
+                margin: 2rem 3rem;
+            }
+            .links-list {
+                margin: 2rem 3rem;
+
+                li {
+                    a {
+                        color: lighten(@footer__background-color, 60%);
+                    }
+                }
+            }
+            .copyright {
+                grid-row: 6;
+                justify-self: center;
+                margin-left: 3rem;
+                span {
+                    color: lighten(@footer__background-color, 60%);
+                }
+            }
+        }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+.media-width(@extremum, @break)
+    when
+    (@extremum = "min")
+    and
+    (@break = @screen__m) {
+    .social-links {
+        .links-icons {
+            ul {
+                gap:4rem;
+
+                .fa-brands {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+    .footer.content {
+        grid-template-columns: repeat(8, 1fr);
+
+        .block.newsletter {
+            grid-column-start: 6;
+            grid-column-end: 9;
+            grid-row: 1;
+            justify-self: end;
+            max-width: 90%;
+            .action.subscribe {
+                border-radius: 0;
+            }
+        }
+        .copyright {
+            grid-column: span 8;
+            grid-row: 2;
+        }
+    }
+}
