@@ -1,0 +1,50 @@
+@button-primary__background: #ef8200;
+@button-primary__hover__color: darken(@button-primary__background, 10%);
+@footer__background-color: #231816;
+
+& when (@media-common = true) {
+
+
+    .block.newsletter {
+        .title {
+            display: block;
+            font-size: 1.8rem;
+        }
+
+        .field.newsletter {
+            margin: 0;
+            input{
+                padding: 0 0 0 1rem;
+                margin: 0;
+                background-color: #918c89;
+                border: none;
+            }
+
+
+            .control:before {
+                display: none;
+            }
+        }
+        .action.subscribe {
+            display: block;
+            background-color: @button-primary__background;
+            color:@footer__background-color ;
+            border: 1px solid @button-primary__background;
+            border-radius: 0;
+            margin-left: 0;
+            height: 100%;
+
+            &:hover,
+            &:active {
+                background: @button-primary__hover__color;
+                border: 1px solid @button-primary__hover__color;
+                color: @footer__background-color;
+            }
+        }
+    }
+}
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
+    .action.subscribe{
+        border-radius: 0;
+    }
+}
