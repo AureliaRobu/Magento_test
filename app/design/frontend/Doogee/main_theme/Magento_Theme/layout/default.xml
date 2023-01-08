@@ -19,6 +19,10 @@
         <referenceContainer name="social.links.container">
             <block name="icons_footer_container" class="Magento\Framework\View\Element\Template"  before="-" template="Magento_Theme::social.phtml"/>
         </referenceContainer>
+        <referenceContainer name="page.bottom">
+            <block name="knockout_container" after="-" template="Magento_Theme::knockout.phtml"/>
+
+        </referenceContainer>
 
     </body>
 </page>

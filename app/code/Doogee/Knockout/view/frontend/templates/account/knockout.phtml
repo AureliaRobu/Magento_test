@@ -1,0 +1,17 @@
+<h2>Here is my Knockout template</h2>
+<div id="knockout-container" data-bind="scope:'customer'">
+  <div data-bind="text:customer().fullname"></div>
+</div>
+<script type="text/x-magento-init">
+    {
+        "#knockout-container": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "customer": {
+                        "component": "Magento_Customer/js/view/customer"
+                    }
+                }
+            }
+        }
+    }
+</script>
