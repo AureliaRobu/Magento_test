@@ -1,21 +1,19 @@
 <div data-bind="scope:'startSimple'">
-<h1 data-bind="text:title"></h1>
+    <h1 data-bind="text:title"></h1>
     <pre data-bind="text:output"></pre>
 
 </div>
 <script type="text/x-magento-init">
     {
-        "*":{
-            "Magento_Ui/js/core/app":{
-               "components":{
-                   "startSimple":{
-                       "component":"Magento_Theme/js/plain-view-model",
-                       "base_url":"<?= $block->escapeJS($block->getBaseUrl()) ?>"
-                   }
-
-                   }
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "startSimple": {
+                        "component": "Magento_Theme/js/plain-view-model",
+                        "base_url": "<?= $block->escapeJS($block->getBaseUrl()) ?>"
+                    }
+                }
             }
         }
-
     }
 </script>

@@ -5,19 +5,23 @@
  * See COPYING.txt for license details.
  */
 -->
-<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="default_head_blocks"/>
     <body>
         <referenceBlock name="footer_links" remove="true"/>
         <referenceBlock name="report.bugs" remove="true"/>
         <referenceContainer name="page.wrapper">
-            <container name="social.links.container" as="social-links" before="footer-container" label="Social Links Container" htmlTag="div" htmlClass="social-links"/>
+            <container name="social.links.container" as="social-links" before="footer-container"
+                       label="Social Links Container" htmlTag="div" htmlClass="social-links"/>
         </referenceContainer>
         <referenceContainer name="footer">
-            <block name="links_footer_container" class="Magento\Framework\View\Element\Template" after="icons_footer_container" template="Magento_Theme::links.phtml"/>
+            <block name="links_footer_container" class="Magento\Framework\View\Element\Template"
+                   after="icons_footer_container" template="Magento_Theme::links.phtml"/>
         </referenceContainer>
         <referenceContainer name="social.links.container">
-            <block name="icons_footer_container" class="Magento\Framework\View\Element\Template"  before="-" template="Magento_Theme::social.phtml"/>
+            <block name="icons_footer_container" class="Magento\Framework\View\Element\Template" before="-"
+                   template="Magento_Theme::social.phtml"/>
         </referenceContainer>
         <referenceContainer name="page.bottom">
             <block name="knockout_container" after="-" template="Magento_Theme::knockout.phtml"/>
