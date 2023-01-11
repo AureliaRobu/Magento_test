@@ -4,4 +4,7 @@ var config = {
             myAccordion: "Magento_Theme/js/myAccordion",
         },
     },
+    config: {
+        mixins: {},
+    },
 };

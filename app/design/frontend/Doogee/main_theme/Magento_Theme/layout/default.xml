@@ -12,21 +12,18 @@
         <referenceBlock name="footer_links" remove="true"/>
         <referenceBlock name="report.bugs" remove="true"/>
         <referenceContainer name="page.wrapper">
-            <container name="social.links.container" as="social-links" before="footer-container"
-                       label="Social Links Container" htmlTag="div" htmlClass="social-links"/>
+            <container name="social.links.container" as="social-links"
+                       label="Social Links Container" htmlTag="div" htmlClass="social-links" before="footer-container"/>
         </referenceContainer>
         <referenceContainer name="footer">
             <block name="links_footer_container" class="Magento\Framework\View\Element\Template"
-                   after="icons_footer_container" template="Magento_Theme::links.phtml"/>
+                    template="Magento_Theme::links.phtml" after="icons_footer_container"/>
         </referenceContainer>
         <referenceContainer name="social.links.container">
-            <block name="icons_footer_container" class="Magento\Framework\View\Element\Template" before="-"
-                   template="Magento_Theme::social.phtml"/>
+            <block name="icons_footer_container" class="Magento\Framework\View\Element\Template"
+                   template="Magento_Theme::social.phtml" before="-"/>
         </referenceContainer>
-        <referenceContainer name="page.bottom">
-            <block name="knockout_container" after="-" template="Magento_Theme::knockout.phtml"/>
 
-        </referenceContainer>
 
     </body>
 </page>

@@ -2,10 +2,11 @@ define(["jquery", "accordion", "matchMedia", "domReady!"], function ($) {
     "use strict";
     const $container = $("#footer-links");
     const $content = $("ul[data-role='content']");
-    console.log($content);
+    console.log($(this));
     mediaCheck({
         media: "(max-width: 768px)",
         entry: function () {
+            console.log(this);
             $container.accordion({
                 openedState: "active",
                 collapsible: true,
@@ -13,12 +14,7 @@ define(["jquery", "accordion", "matchMedia", "domReady!"], function ($) {
             });
         },
         exit: function () {
-            $container.accordion({
-                openedState: "active",
-                collapsible: false,
-                active: [0, 1, 2, 3],
-                multipleCollapsible: false,
-            });
+            $container.accordion();
             $content.removeAttr("style");
             $container.accordion("destroy");
         },

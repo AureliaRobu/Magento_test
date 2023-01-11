@@ -1,4 +1,5 @@
 define(["jquery", "jquery-ui-modules/widget", "accordion"], function ($) {
+    "use strict";
     $.widget("Magento_Theme.customAccordion", $.mage.accordion, {
         options: {
             breakpoint: 768,
@@ -8,23 +9,19 @@ define(["jquery", "jquery-ui-modules/widget", "accordion"], function ($) {
             this._handleMedia();
         },
         _handleMedia: function () {
-            $this = this;
+            var $this = this;
             mediaCheck({
                 media: `(max-width: ${this.options.breakpoint}px)`,
                 entry: function () {
-                    $this.options.openedState = "active";
-                    $this.options.collapsible = true;
-                    $this.options.active = false;
+                    $this._callCollapsible();
                 },
                 exit: function () {
-                    $this.options.openedState = "active";
-                    $this.options.collapsible = false;
-                    $this.options.active = [0, 1, 2, 3];
-                    $this.options.multipleCollapsible = false;
-
+                    $this._callCollapsible();
                     $("[data-role='content']").removeAttr("style");
+                    $this._destroy();
                 },
             });
         },
     });
+    return $.Magento_Theme.customAccordion;
 });

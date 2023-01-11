@@ -1,4 +1,13 @@
-<h2>Here is my Knockout template</h2>
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var \Magento\Customer\Block\Account\Dashboard\Info $block */
+?>
+
+<h2><?= $block->escapeHtml(__('Here is my Knockout template')) ?></h2>
 <div id="knockout-container" data-bind="scope:'customer'">
     <div data-bind="text:customer().fullname"></div>
 </div>
